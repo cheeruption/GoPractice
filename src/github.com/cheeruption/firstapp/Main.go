@@ -91,7 +91,7 @@ func main() {
 	}
 	fmt.Println("Arrays and slices are coming...", arr2, arr2[0], arr3, arr4, sl, "\n", s)
 	//
-	// 13/27
+	// 13/27 глава по спискам
 	//
 }
 func add(x int, y int) int {
