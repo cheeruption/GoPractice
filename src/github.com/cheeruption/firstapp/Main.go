@@ -21,11 +21,11 @@ const (
 	Big   = 1 << 100
 	Small = Big >> 99
 )
-const arr1 = "story"
+const arr1 = "yrots"
 
 func main() {
 	k, str := 68, "test_string"
-	fmt.Println("hi there", rand.Intn(99))
+	defer fmt.Println("\nhere is Deferred function - hi there", rand.Intn(99))
 	fmt.Println("This is pi", math.Pi)
 	fmt.Println(add(5, 6), add2(5, 6))
 	fmt.Println(swap("this", "that"))
@@ -40,9 +40,9 @@ func main() {
 	//fmt.Println(needFloat(Big)) а здесь всё будет ок
 	for i := 0; i < len(arr1); i++ {
 		if i == 0 {
-			fmt.Println("Тут смотрим как записывается IF и цикл FOR:")
+			defer fmt.Println("\n Выше видим как записывается IF и цикл FOR.")
 		}
-		fmt.Printf("     "+"%c", arr1[i])
+		defer fmt.Printf("     "+"%c", arr1[i])
 
 	}
 
@@ -53,6 +53,20 @@ func main() {
 	}
 	fmt.Println("Испытываем Switch и смотрим текущую Ось = ", whatOS())
 	fmt.Printf("Today is - %s", time.Now().Weekday())
+
+	//if-then-else SWITCH style
+	t := time.Now().Hour()
+	fmt.Println("\nLet's check the time:")
+	switch {
+	case t < 12:
+		fmt.Println("wow! morning")
+	case t < 17:
+		fmt.Println("its evening soon")
+	case t < 23:
+		fmt.Println("Dawn of the new day")
+	default:
+		fmt.Println("its reaally late")
+	}
 }
 func add(x int, y int) int {
 	return x + y
