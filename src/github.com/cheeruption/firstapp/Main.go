@@ -18,8 +18,8 @@ var h int = 45
 
 const h51 = 666
 const (
-	Big   = 1 << 100
-	Small = Big >> 99
+	big   = 1 << 100
+	small = big >> 99
 )
 const arr1 = "yrots"
 
@@ -34,10 +34,10 @@ func main() {
 	g := float64(h) + 0.35
 	fmt.Println("Конвертация типов переменных -", g, "\nAnd that is a const -", h51)
 
-	fmt.Println(needInt(Small))
-	//fmt.Println(needInt(Big)) слишком большой int - программа крашится
-	fmt.Println(needFloat(Small))
-	//fmt.Println(needFloat(Big)) а здесь всё будет ок
+	fmt.Println(needInt(small))
+	//fmt.Println(needInt(big)) слишком большой int - программа крашится
+	fmt.Println(needFloat(small))
+	//fmt.Println(needFloat(big)) а здесь всё будет ок
 	for i := 0; i < len(arr1); i++ {
 		if i == 0 {
 			defer fmt.Println("\n Выше видим как записывается IF и цикл FOR.")
