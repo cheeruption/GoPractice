@@ -67,6 +67,32 @@ func main() {
 	default:
 		fmt.Println("its reaally late")
 	}
+	point1 := &t
+	fmt.Println("Что насчет pointer'ов?", &t, *point1, *&t == *point1) // dereferencing
+	fmt.Println("А вот и структуры подъехали", smth{56, "horses"})
+	mare := smth{3, "kon"}
+	fmt.Println(mare.that)
+	arr2 := [3]int{5, 6, 7}
+	arr3 := arr2
+	arr4 := &arr2
+	arr4[0] = 99
+	arr3[0] = 77
+	sl := arr2[1:2]
+	s := []struct {
+		i int
+		b bool
+	}{
+		{2, true},
+		{3, false},
+		{5, true},
+		{7, true},
+		{11, false},
+		{13, true},
+	}
+	fmt.Println("Arrays and slices are coming...", arr2, arr2[0], arr3, arr4, sl, "\n", s)
+	//
+	// 13/27
+	//
 }
 func add(x int, y int) int {
 	return x + y
@@ -97,4 +123,9 @@ func whatOS() string {
 		os = "Windows"
 	}
 	return os
+}
+
+type smth struct {
+	this int
+	that string
 }
