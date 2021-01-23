@@ -7,15 +7,19 @@ import (
 )
 
 var i, j int = 1, 5
+var (
+	y int = 44
+	u int = 33
+)
 
 func main() {
-	k := "test_string"
+	k, str := 68, "test_string"
 	fmt.Println("hi there", rand.Intn(99))
 	fmt.Println("This is pi", math.Pi)
 	fmt.Println(add(5, 6), add2(5, 6))
 	fmt.Println(swap("this", "that"))
 	fmt.Println(swap2("this", "that"))
-	fmt.Println("Объявления функции через var - ", i, j, "\n"+k)
+	fmt.Println("Объявление переменных - ", i, j, "\nShort declaration - ", k, str, "\nFactored declaration - ", y, u)
 }
 func add(x int, y int) int {
 	return x + y
