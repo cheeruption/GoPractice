@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"runtime"
 	"time"
+	"github.com/cheeruption/firstapp/pkg/Praktik"
 )
 
 var i, j int = 1, 5
@@ -130,6 +131,4 @@ type smth struct {
 	that string
 }
 
-//9268571358102374
-//9047472177414999
-//9659600322167389
+fmt.Println(praktik())

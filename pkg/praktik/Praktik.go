@@ -1,6 +1,5 @@
 package praktik
 
-import (
-	"fmt"
-	"math"
-)
+func PkgTest() {
+	return "Hello world"
+}
